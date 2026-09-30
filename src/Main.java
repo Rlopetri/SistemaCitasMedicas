@@ -6,28 +6,24 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Doctor> doctores = new ArrayList<>();
+        ArrayList<Paciente> pacientes = new ArrayList<>();
 
         System.out.println("=== SISTEMA DE CITAS MÉDICAS ===");
-        System.out.println("Registro de doctor");
+        System.out.println("Registro de paciente");
 
-        System.out.print("Ingresa el ID del doctor: ");
+        System.out.print("Ingresa el ID del paciente: ");
         String id = scanner.nextLine();
 
-        System.out.print("Ingresa el nombre del doctor: ");
+        System.out.print("Ingresa el nombre del paciente: ");
         String nombre = scanner.nextLine();
 
-        System.out.print("Ingresa la especialidad: ");
-        String especialidad = scanner.nextLine();
+        Paciente paciente = new Paciente(id, nombre);
+        pacientes.add(paciente);
 
-        Doctor doctor = new Doctor(id, nombre, especialidad);
-        doctores.add(doctor);
-
-        System.out.println("\nDoctor registrado correctamente.");
-        System.out.println("Datos del doctor:");
-        System.out.println("ID: " + doctor.getId());
-        System.out.println("Nombre: " + doctor.getNombre());
-        System.out.println("Especialidad: " + doctor.getEspecialidad());
+        System.out.println("\nPaciente registrado correctamente.");
+        System.out.println("Datos del paciente:");
+        System.out.println("ID: " + paciente.getId());
+        System.out.println("Nombre: " + paciente.getNombre());
 
         scanner.close();
     }
