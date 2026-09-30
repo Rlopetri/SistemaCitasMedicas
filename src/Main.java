@@ -58,7 +58,11 @@ public class Main {
             System.out.println("\nCITAS:");
             for (Cita c : citas) {
                 System.out.println(c);
-            }
+            }System.out.println("\n=== GUARDANDO INFORMACIÓN ===");
+
+            ArchivoUtil.guardarDoctores(doctores);
+            ArchivoUtil.guardarPacientes(pacientes);
+            ArchivoUtil.guardarCitas(citas);
 
         } else {
 
